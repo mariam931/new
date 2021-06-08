@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BAYRELAX HOTELS </title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://kit.fontawesome.com/d758a82af9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+   <div class="background">
+    <header>
+        <div class="main">
+            <div class="LOGO">
+                <img src="LOGO.png">
+            </div>
+            <div class="links-top">
+                <ul>
+                    <li class="active"><a href="file:///D:/it%20project/home.html">Home</a></li>
+                    <li><a href="file:///D:/it%20project/room.html">Rooms</a></li>
+                    <li><a href="file:///D:/it%20project/restaurant.html">Restaurant</a></li>
+                    <li><a href="file:///D:/it%20project/about.html">About</a></li>
+                    <li><a href="file:///D:/it%20project/signup.html">Sign Up</a></li>
+                    <li><a href="file:///D:/it%20project/contact.html">Contact</a></li>
+                    <li><a href="#">Book</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="title">
+            <h1>BAYRELAX HOTELS <h1>
+        </div>
+        <div class="button">
+            <a href="file:///D:/it%20project/about.html#" class="btn">About Us</a>
+            <a href="file:///D:/it%20project/room.html" class="btn">Rooms</a>
+        </div>
+    </header>
+
+    <div class="lightbox">
+        <br>
+        <div class="welcometo">
+            <h2 style="text-align:center">WELCOM TO BAYRELAX HOTELS</h2>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="44.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="deluxer room.jpg" style="width:100%" onclick="openModal();currentSlide(2)"
+                    class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="55.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="3.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+            </div>
+        </div>
+    
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+    
+                <div class="mySlides">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="44.jpg" style="width: 100%">
+                </div>
+    
+                <div class="mySlides">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="deluxer room.jpg" style="width:100%">
+                </div>
+    
+                <div class="mySlides">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="55.jpg" style="width:100%">
+                </div>
+    
+                <div class="mySlides">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="3.jpg" style="width:100%">
+                </div>
+    
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+    
+    
+                <div class="column">
+                    <img class="demo cursor" src="44.jpg" style="width:100%" onclick="currentSlide(1)" alt="SUITES&ROOMS">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="deluxer room.jpg" style="width:100%" onclick="currentSlide(2)"
+                        alt="LUXURY ROOMS">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="55.jpg" style="width:100%" onclick="currentSlide(3)" alt="RETAURANT">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="3.jpg" style="width:100%" onclick="currentSlide(4)" alt="SWIMMING POOL">
+                </div>
+            </div>
+        </div>
+        <script>
+            function openModal() {
+                document.getElementById("myModal").style.display = "block";
+            }
+
+            function closeModal() {
+                document.getElementById("myModal").style.display = "none";
+            }
+
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                var captionText = document.getElementById("caption");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                captionText.innerHTML = dots[slideIndex - 1].alt;
+            }
+        </script>
+        </br>
+    </div>
+
+    <div class="room">
+        <div class="room-in">
+            <div class="title2">
+                <h4><span>DISCOVERT</span>OUR ROOMS</MENU>
+                </h4>
+            </div>
+            <div class="room-edit">
+                <div class="rooms-name">
+                    <img src="suiteroom2.jpg" style="width: 80%;" alt="">
+                    <div class="room-info">
+                        <h4>SUTIE ROOM <span>$90 per night</span> </h4>
+                        <p>BOOK NOW.</p>
+                    </div>
+                </div>
+                <div class="rooms-name">
+                    <img src="family room.jpg" style="width: 80%;" alt="">
+                    <div class="room-info">
+                        <h4>FAMILY ROOM <span>$200 Per night</span> </h4>
+                        <p>BOOK NOW.</p>
+                    </div>
+                </div>
+                <div class="rooms-name">
+                    <img src="deluxer room2.jpg" style="width: 80%;" alt="">
+                    <div class="room-info">
+                        <h4>DELUXER ROOM <span>$145 per night</span> </h4>
+                        <p>BOOK NOW.</p>
+                    </div>
+                </div>
+                <div class="rooms-name">
+                    <img src="luxury2.jpg" style="width: 80%;" alt="">
+                    <div class="room-info">
+                        <h4>LUXURY ROOM <span>$200 per night</span> </h4>
+                        <p>BOOK NOW.</p>
+                    </div>
+                </div>
+                <div class="rooms-name">
+                    <img src="superior room.jpg" style="width: 80%;" alt="">
+                    <div class="room-info">
+                        <h4>SOPERIOR ROOM <span>$300 per night</span> </h4>
+                        <p>BOOK NOW.</p>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+    <div class="restauran">
+        <div class="wrapper">
+            <div class="title2">
+                <h4><span>RETAURANT</span>OUR MENU</MENU>
+                </h4>
+            </div>
+            <div class="menu">
+                <div class="single-menu">
+                    <img src="f66.jpg" style="width: 30%;" alt="">
+                    <div class="menu-content">
+                        <h4>Roast Beef and Avocado Sandwich <span>$30</span> </h4>
+                        <p>Aperiam tempore sit,perferendis numquam repudianae porro voluptate dicta saepe faciles.</p>
+                    </div>
+                </div>
+                <div class="single-menu">
+                    <img src="f2.jpg" style="width: 40%;" alt="">
+                    <div class="menu-content">
+                        <h4>Seafood Soup <span>$30</span></h4>
+                        <p>Aperiam tempore sit,perferendis numquam repudianae porro voluptate dicta saepe faciles..</p>
+                    </div>
+                </div>
+                <div class="single-menu">
+                    <img src="f33 (1).jpg" style="width: 40%;" alt="">
+                    <div class="menu-content">
+                        <h4>Cinnamon Rolls <span>$40</span></h4>
+                        <p>Aperiam tempore sit,perferendis numquam repudianae porro voluptate dicta saepe faciles.</p>
+                    </div>
+                </div>
+                <div class="single-menu">
+                    <img src="f22.jpg" style="width: 40%;" alt="">
+                    <div class="menu-content">
+                        <h4>Creamy Garlic Tuscan Salmon <span>$45</span></h4>
+                        <p>Aperiam tempore sit,perferendis numquam repudianae porro voluptate dicta saepe faciles.</p>
+                    </div>
+                </div>
+                <div class="single-menu">
+                    <img src="f55.jpg" style="width: 40%;" alt="">
+                    <div class="menu-content">
+                        <h4>Potatoes In Tomato Sauce<span>$45</span></h4>
+                        <p>Aperiam tempore sit,perferendis numquam repudianae porro voluptate dicta saepe faciles.</p>
+                    </div>
+                </div>
+                <div class="single-menu">
+                    <img src="f11.jpg" style="width: 40%;" alt="">
+                    <div class="menu-content">
+                        <h4>Fresh Fruit Salad<span>$25</span> </h4>
+                        <p>Aperiam tempore sit,perferendis numquam repudianae porro voluptate dicta saepe faciles.</p>
+                    </div>
+                </div>
+                <div class="single-menu">
+                    <img src="FF1.jpg" style="width: 40%;" alt="">
+                    <div class="menu-content">
+                        <h4>French Toast<span>$30</span> </h4>
+                        <p>Aperiam tempore sit,perferendis numquam repudianae porro voluptate dicta saepe faciles.</p>
+                    </div>
+                </div>
+                <div class="single-menu">
+                    <img src="f5.jpg" style="width: 40%;" alt="">
+                    <div class="menu-content">
+                        <h4>Curry Shrimp<span>$45</span> </h4>
+                        <p>Aperiam tempore sit,perferendis numquam repudianae porro voluptate dicta saepe faciles.</p>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+ <footer class="footer">
+    <div class="inner-footer">
+        <div class="social-links">
+            <ul>
+                <li class="social-items"><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                <li class="social-items"><a href="https://twitter.com/"><i class="fab fa-twitter-square"></i></a></li>
+                <li class="social-items"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                <li class="social-items"><a href="https://www.tumblr.com/"><i class="fab fa-tumblr"></i></a></li>
+            </ul>
+        </div>
+        <div class="quick-links">
+            <ul>
+                <li class="quick-items"><a href="file:///D:/it%20project/home.html">Home</a></li>
+                <li class="quick-items"><a href="file:///D:/it%20project/about.html">About Us</a></li>
+                <li class="quick-items"><a href="file:///D:/it%20project/contact.html">Contact Us</a></li>
+                <li class="quick-items"><a href="file:///D:/it%20project/room.html">Rooms</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="outer-footer">
+        copyright &copy; all rights reserved
+    </div>
+
+    
+
+
+</footer>
+
+
+
+</div>
+</body>
+
+</html>
